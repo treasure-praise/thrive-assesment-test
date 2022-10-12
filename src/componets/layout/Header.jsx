@@ -1,6 +1,5 @@
 import React from "react"
 import { FaGithub } from "react-icons/fa"
-import { Link } from "react-router-dom"
 import { Avatar } from "@material-tailwind/react"
 
 export default function Header() {

@@ -1,7 +1,10 @@
-import { useState, useEffect, createContext } from "react"
+/* eslint-disable react/prop-types */
+/* eslint-disable react/jsx-no-constructed-context-values */
+import { useState, createContext } from "react"
 
 const UsersContext = createContext()
 
+// eslint-disable-next-line react/function-component-definition
 export const UsersContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState([])

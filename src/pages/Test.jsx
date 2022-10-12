@@ -1,6 +1,6 @@
 import UserSkeleton from "../componets/UserSkeleton"
 
-const TestPage = () => {
+function TestPage() {
   return (
     <div className='w-1/2 border'>
       <UserSkeleton />

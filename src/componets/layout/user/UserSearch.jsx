@@ -1,5 +1,5 @@
-import React, { useState, useEffect, useContext } from "react"
-import { Input, Button, Alert } from "@material-tailwind/react"
+import React, { useState, useContext } from "react"
+import { Input, Button } from "@material-tailwind/react"
 import { FaSearch } from "react-icons/fa"
 import UsersContext from "../../../context/UsersContext"
 
@@ -9,18 +9,6 @@ function UserSearch() {
   const [search, setSearch] = useState("")
   const [isInputPresent, setisInputPresent] = useState(false)
 
-  const handleSubmit = async (e) => {
-    e.preventDefault()
-    if (search == "") {
-      setisInputPresent(true)
-      return
-    }
-    setLoading(true)
-    await fetchUsers()
-    setSearch("")
-    setLoading(false)
-  }
-
   const fetchUsers = async () => {
     const params = search
     console.log(params)
@@ -29,6 +17,17 @@ function UserSearch() {
     )
     const data = await response.json()
     setData(data.items)
+  }
+  const handleSubmit = async (e) => {
+    e.preventDefault()
+    if (search === "") {
+      setisInputPresent(true)
+      return
+    }
+    setLoading(true)
+    await fetchUsers()
+    setSearch("")
+    setLoading(false)
   }
 
   return (
@@ -47,11 +46,11 @@ function UserSearch() {
         </Button>
       </form>
 
-      {/* {isInputPresent && (
-        <Alert  className=" w-1/2 mx-auto" color="red">
+      {!isInputPresent && (
+        <div className=' w-1/2 mx-auto' color='red'>
           Enter Something
-        </Alert>
-      )} */}
+        </div>
+      )}
     </div>
   )
 }

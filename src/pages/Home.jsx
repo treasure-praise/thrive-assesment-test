@@ -1,7 +1,7 @@
 import UserContainer from "../componets/layout/user/UserContainer"
 import UserSearch from "../componets/layout/user/UserSearch"
 
-const Home = () => {
+function Home() {
   return (
     <div className='flex flex-col h-full'>
       <UserSearch />

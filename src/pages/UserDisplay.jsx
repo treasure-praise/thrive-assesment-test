@@ -18,7 +18,6 @@ function UserDisplay() {
   const fetchUser = async () => {
     const response = await fetch(`https://api.github.com/users/${login}`)
     const data = await response.json()
-    console.log(1)
     setCurrentUser(data)
   }
 
@@ -26,7 +25,6 @@ function UserDisplay() {
     const response = await fetch(`https://api.github.com/users/${login}/repos`)
     const data = await response.json()
     await setCurrentUserRepos(data)
-    console.log(3)
   }
 
   const getUserFollowers = async () => {

@@ -1,7 +1,9 @@
+/* eslint-disable react/prop-types */
 import React from "react"
 import { Link } from "react-router-dom"
 import { Avatar, Button } from "@material-tailwind/react"
 
+// eslint-disable-next-line react/prop-types
 function Users({ data }) {
   return (
     <div className='border rounded w-full h-fit flex gap-8 items-center p-2'>
