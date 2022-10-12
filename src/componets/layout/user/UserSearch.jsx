@@ -11,7 +11,6 @@ function UserSearch() {
 
   const fetchUsers = async () => {
     const params = search
-    console.log(params)
     const response = await fetch(
       `https://api.github.com/search/users?q=${params}`,
     )

@@ -33,7 +33,6 @@ function UserDisplay() {
     )
     const data = await response.json()
     await setCurrentUserFollowing(data)
-    console.log(2)
   }
 
   useEffect(() => {
