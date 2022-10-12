@@ -1,8 +1,7 @@
 import { Avatar } from "@material-tailwind/react"
-import Users from "../componets/layout/user/Users"
 import { useContext, useEffect } from "react"
-import {} from "react"
 import { useParams } from "react-router-dom"
+import Users from "../componets/layout/user/Users"
 import UsersContext from "../context/UsersContext"
 
 function UserDisplay() {

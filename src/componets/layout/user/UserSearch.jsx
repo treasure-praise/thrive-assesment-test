@@ -1,51 +1,48 @@
-import React, { useState, useEffect, useContext } from "react";
-import { Input, Button, Alert } from "@material-tailwind/react";
-import { FaSearch } from "react-icons/fa";
-import UsersContext from "../../../context/UsersContext";
+import React, { useState, useEffect, useContext } from "react"
+import { Input, Button, Alert } from "@material-tailwind/react"
+import { FaSearch } from "react-icons/fa"
+import UsersContext from "../../../context/UsersContext"
 
 function UserSearch() {
+  const { setData, setLoading } = useContext(UsersContext)
 
-  const { setData,setLoading } =
-    useContext(UsersContext);
+  const [search, setSearch] = useState("")
+  const [isInputPresent, setisInputPresent] = useState(false)
 
-    const [search, setSearch] = useState("");
-  const [isInputPresent, setisInputPresent] = useState(false);
-
-  const handleSubmit = async(e) => {
-    e.preventDefault();
+  const handleSubmit = async (e) => {
+    e.preventDefault()
     if (search == "") {
-      setisInputPresent(true);
+      setisInputPresent(true)
       return
     }
     setLoading(true)
-    await fetchUsers();
-    setSearch("");
+    await fetchUsers()
+    setSearch("")
     setLoading(false)
-  };
+  }
 
   const fetchUsers = async () => {
-    const params = search;
-    console.log(params);
+    const params = search
+    console.log(params)
     const response = await fetch(
-      `https://api.github.com/search/users?q=${params}`
-    );
-    const data = await response.json();
-    setData(data.items);
-  };
+      `https://api.github.com/search/users?q=${params}`,
+    )
+    const data = await response.json()
+    setData(data.items)
+  }
 
   return (
-    <div className="md:w-1/2 w-full mx-auto px-12 ">
-      
-      <form onSubmit={handleSubmit} action="" className="flex gap-12">
+    <div className='md:w-1/2 w-full mx-auto px-12 '>
+      <form onSubmit={handleSubmit} action='' className='flex gap-12'>
         <Input
-          onChange={(e)=>{
+          onChange={(e) => {
             setSearch(e.target.value)
           }}
-          value={search || ''}
-          label="Search Users"
+          value={search || ""}
+          label='Search Users'
           icon={<FaSearch />}
         />
-        <Button value='search' type="submit" color="green">
+        <Button value='search' type='submit' color='green'>
           Search
         </Button>
       </form>
@@ -56,7 +53,7 @@ function UserSearch() {
         </Alert>
       )} */}
     </div>
-  );
+  )
 }
 
-export default UserSearch;
+export default UserSearch
