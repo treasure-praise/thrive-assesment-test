@@ -4,7 +4,7 @@ import { FaSearch } from "react-icons/fa"
 import UsersContext from "../../../context/UsersContext"
 
 function UserSearch() {
-  const { setData, setLoading } = useContext(UsersContext)
+  const { setData, setLoading, setError } = useContext(UsersContext)
 
   const [search, setSearch] = useState("")
   const [isInputPresent, setisInputPresent] = useState(false)
@@ -15,7 +15,12 @@ function UserSearch() {
       `https://api.github.com/search/users?q=${params}`,
     )
     const data = await response.json()
+    if (data.items.length === 0) {
+      setError(true)
+      return
+    }
     setData(data.items)
+    setError(false)
   }
   const handleSubmit = async (e) => {
     e.preventDefault()
@@ -38,14 +43,20 @@ function UserSearch() {
           }}
           value={search || ""}
           label='Search Users'
+          placeholder='search users'
           icon={<FaSearch />}
         />
-        <Button value='search' type='submit' color='green'>
+        <Button
+          data-testid='searchBtn'
+          value='search'
+          type='submit'
+          color='green'
+        >
           Search
         </Button>
       </form>
 
-      {!isInputPresent && (
+      {isInputPresent && (
         <div className=' w-1/2 mx-auto' color='red'>
           Enter Something
         </div>

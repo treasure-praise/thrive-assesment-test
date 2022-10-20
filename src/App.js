@@ -7,7 +7,7 @@ import Footer from "./componets/layout/Footer"
 import UserDisplay from "./pages/UserDisplay"
 
 import Home from "./pages/Home"
-import TestPage from "./pages/Test"
+import Error from "./pages/Error"
 
 function App() {
   return (
@@ -15,8 +15,8 @@ function App() {
       <Header />
       <Routes>
         <Route path='/' element={<Home />} />
-        <Route path='/test' element={<TestPage />} />
         <Route path='/user/:login' element={<UserDisplay />} />
+        <Route path='*' element={<Error />} />
       </Routes>
       <Footer />
     </div>

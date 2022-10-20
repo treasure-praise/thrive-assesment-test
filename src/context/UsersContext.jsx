@@ -8,9 +8,7 @@ const UsersContext = createContext()
 export const UsersContextProvider = ({ children }) => {
   const [loading, setLoading] = useState(false)
   const [data, setData] = useState([])
-  const [currentUser, setCurrentUser] = useState("")
-  const [currentUserFollowing, setCurrentUserFollowing] = useState([])
-  const [currentUserRepos, setCurrentUserRepos] = useState([])
+  const [error, setError] = useState(false)
 
   return (
     <UsersContext.Provider
@@ -19,12 +17,8 @@ export const UsersContextProvider = ({ children }) => {
         setData,
         loading,
         setLoading,
-        currentUser,
-        setCurrentUser,
-        currentUserFollowing,
-        setCurrentUserFollowing,
-        currentUserRepos,
-        setCurrentUserRepos,
+        error,
+        setError,
       }}
     >
       {children}
