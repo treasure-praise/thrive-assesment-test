@@ -1,12 +1,16 @@
+/* eslint-disable no-undef */
+/* eslint-disable react/prop-types */
 import React from "react"
 import { Avatar } from "@material-tailwind/react"
+// eslint-disable-next-line import/no-unresolved, import/extensions
 import UserFollowers from "../componets/layout/user/UserFollowers"
-// eslint-disable-next-line react/function-component-definition
+// eslint-disable-next-line react/function-component-definition, react/prop-types
 const UserInfo = ({ currentUser }) => {
   return (
     <div className='w-4/5 border mx-auto p-8'>
       <div className='flex'>
         <Avatar
+          // eslint-disable-next-line react/prop-types
           src={currentUser.avatar_url}
           size='xxl'
           alt='avatar'

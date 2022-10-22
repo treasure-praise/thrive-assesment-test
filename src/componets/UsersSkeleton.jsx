@@ -6,7 +6,10 @@ import "react-loading-skeleton/dist/skeleton.css"
 const UsersSkeleton = () => {
   return (
     <>
-      <div className='border rounded  flex gap-8 items-center p-2'>
+      <div
+        className='border rounded  flex gap-8 items-center p-2 '
+        data-testid='skeleton'
+      >
         <Skeleton circle width={100} height={100} />
         <div className='flex flex-col items-start'>
           <h2 className='md:text-xl font-bold w-4/5'>

@@ -1,4 +1,4 @@
-const Error = () => {
+function Error() {
   return (
     <div className='mx-auto p-8'>
       <h1 className='text-center'>404 Error</h1>
