@@ -7,8 +7,10 @@ import Flow from "./assets/flow.svg"
 import Plugin from "./assets/plugin.svg"
 import Repo from "./assets/repo.svg"
 import StackAlt from "./assets/stackalt.svg"
+import ThriveLogo from "./assets/thrive-agric-logo.svg"
+import CrustLogo from "./assets/crust.png"
 
-<Meta title='Example/Introduction' />
+<Meta title='Introduction' />
 
 <style>
   {`
@@ -29,6 +31,10 @@ import StackAlt from "./assets/stackalt.svg"
       grid-template-columns: 1fr;
       grid-template-rows: 1fr 1fr;
       row-gap: 10px;
+    }
+
+  .img{
+    margin-bottom : 12px;
     }
 
     @media (min-width: 620px) {
@@ -114,106 +120,62 @@ import StackAlt from "./assets/stackalt.svg"
   `}
 </style>
 
-# Welcome to Storybook
+<div className='img'>
+  <img src={ThriveLogo} alt='LOGO' />
+</div>
 
-Storybook helps you build UI components in isolation from your app's business logic, data, and context.
-That makes it easy to develop hard-to-reach states. Save these UI states as **stories** to revisit during development, testing, or QA.
+# Welcome to ThriveAgrics Design System Documentation
 
-Browse example stories now by navigating to them in the sidebar.
-View their code in the `stories` directory to learn how they work.
-We recommend building UIs with a [**component-driven**](https://componentdriven.org) process starting with atomic components and ending with pages.
+ThriveAgric makes use of Storybook to Build the largest network of profitable farmers across Africa : by building UI components in isolation from our app's **Agricultural Operating Systme (AOS)**, data, and business logic.
+That makes it easy for us to develop hard-to-reach states. Save these UI states as stories to revisit during development, testing, or QA.
 
-<div className='subheading'>Configure</div>
+The Sidebar shows a collection of utility components that are designed to be used as building blocks for [ThriveArics Github finder application](https://thrivegithubfinder.netlify.com).
+
+<div className='subheading'>PRODUCT OFFERINGS</div>
 
 <div className='link-list'>
-  <a
-    className='link-item'
-    href='https://storybook.js.org/docs/react/addons/addon-types'
-    target='_blank'
-  >
-    <img src={Plugin} alt='plugin' />
+  <a className='link-item' href='https://thriveagric.com' target='_blank'>
+    <img src={ThriveLogo} alt='logo' />
     <span>
-      <strong>Presets for popular tools</strong>
-      Easy setup for TypeScript, SCSS and more.
+      <strong>
+        Building the largest network of profitable farmers across Africa
+      </strong>
+      We empower smallholder farmers, leveraging our technology to access finance,
+      and improve productivity & sales to promote food security.
     </span>
   </a>
-  <a
-    className='link-item'
-    href='https://storybook.js.org/docs/react/configure/webpack'
-    target='_blank'
-  >
-    <img src={StackAlt} alt='Build' />
+  <a className='link-item' href='https://crust.africa' target='_blank'>
+    <img src={CrustLogo} alt='Build' />
     <span>
-      <strong>Build configuration</strong>
-      How to customize webpack and Babel
+      <strong>Delivering sustainable growth & inclusion to SMEs</strong>
+      financial technology company dedicated to helping SMEs bank, grow, and win,
+      by providing easy access to simple, community-based, and reliable financial
+      products & services.
     </span>
   </a>
-  <a
-    className='link-item'
-    href='https://storybook.js.org/docs/react/configure/styling-and-css'
-    target='_blank'
-  >
+  <a className='link-item' href='https://thriveacademy.ng' target='_blank'>
     <img src={Colors} alt='colors' />
     <span>
-      <strong>Styling</strong>
-      How to load and configure CSS libraries
+      <strong>ThriveAcademy</strong>
+      We are geared to help you develop and achieve your Personal Development Plans,
+      via the process of creating an action plan within the context of your career
     </span>
   </a>
   <a
     className='link-item'
-    href='https://storybook.js.org/docs/react/get-started/setup#configure-storybook-for-your-stack'
+    href='https://thrivegithubfinder.netlify.app'
     target='_blank'
   >
     <img src={Flow} alt='flow' />
     <span>
-      <strong>Data</strong>
-      Providers and mocking for data libraries
-    </span>
-  </a>
-</div>
-
-<div className='subheading'>Learn</div>
-
-<div className='link-list'>
-  <a className='link-item' href='https://storybook.js.org/docs' target='_blank'>
-    <img src={Repo} alt='repo' />
-    <span>
-      <strong>Storybook documentation</strong>
-      Configure, customize, and extend
-    </span>
-  </a>
-  <a
-    className='link-item'
-    href='https://storybook.js.org/tutorials/'
-    target='_blank'
-  >
-    <img src={Direction} alt='direction' />
-    <span>
-      <strong>In-depth guides</strong>
-      Best practices from leading teams
-    </span>
-  </a>
-  <a
-    className='link-item'
-    href='https://github.com/storybookjs/storybook'
-    target='_blank'
-  >
-    <img src={Code} alt='code' />
-    <span>
-      <strong>GitHub project</strong>
-      View the source and add issues
-    </span>
-  </a>
-  <a className='link-item' href='https://discord.gg/storybook' target='_blank'>
-    <img src={Comments} alt='comments' />
-    <span>
-      <strong>Discord chat</strong>
-      Chat with maintainers and the community
+      <strong>GithubFinder App</strong>
+      React application to display Github Users
     </span>
   </a>
 </div>
 
 <div className='tip-wrapper'>
-  <span className='tip'>Tip</span>Edit the Markdown in{" "}
-  <code>stories/Introduction.stories.mdx</code>
+  <span className='tip'>Tip</span>I'm looking for my first Engineering role and
+  i'm prioritizing a company that has strong Engineering leadership hence,
+  ThriveAgric <code>Abeg Employ meee 🤲👨🏽‍💻🙏🏽</code>
 </div>

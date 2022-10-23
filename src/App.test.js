@@ -1,20 +1,14 @@
-import {
-  fireEvent,
-  render,
-  screen,
-  waitForElementToBeRemoved,
-} from "@testing-library/react"
+import { fireEvent, render, screen } from "@testing-library/react"
 import userEvent from "@testing-library/user-event"
 // import UserSearch from "./componets/layout/user/UserSearch"
 // import App from "./App"
 // eslint-disable-next-line no-unused-vars
-import { Route, Routes } from "react-router-dom"
+import { Route, Routes, BrowserRouter } from "react-router-dom"
 import { BrowserRouter } from "react-router-dom"
-import UsersContext, { UsersContextProvider } from "./context/UsersContext"
+import { UsersContextProvider } from "./context/UsersContext"
 import Home from "./pages/Home"
 import Footer from "./componets/layout/Footer"
 import Header from "./componets/layout/Header"
-import mockFetch from "./services/mockData"
 import UserContainer from "./componets/layout/user/UserContainer"
 import Users from "./componets/layout/user/Users"
 import UserDisplay from "./pages/UserDisplay"

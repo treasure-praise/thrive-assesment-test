@@ -43,7 +43,6 @@ function UserSearch() {
           }}
           value={search || ""}
           label='Search Users'
-          placeholder='search users'
           icon={<FaSearch />}
         />
         <Button
