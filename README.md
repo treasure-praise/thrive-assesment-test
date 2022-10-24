@@ -16,8 +16,9 @@ https://api.github.com/search/users?q={paystack} -[Root Endpoint](https://api.gi
 
 [ThriveGithubFinder](https://thrivegithubfinder.netlify.app)
 
-Storybook Implementation
-[Stories📕](https://thrivegithubfinder-storybook.netlify.app)
+## Stories
+
+[Storybook Implementation📕](https://thrivegithubfinder-storybook.netlify.app)
 
 ## Getting Started with Create React App
 
