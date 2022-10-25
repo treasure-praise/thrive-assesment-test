@@ -1,6 +1,6 @@
 # ThriveAgric Assesment
 
-![demoVideo](https://im3.ezgif.com/tmp/ezgif-3-c219346e98.gif "Demo Video")
+![demoVideo](https://i.ibb.co/9txBk84/thrivedemo.gif)
 
 Rough Wireframe of Application done in [figma](https://www.figma.com/file/sLgaoUSjynnBaqBNpuWiN0/Thrive-Assesment?node-id=0%3A1)
 
